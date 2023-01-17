@@ -5,17 +5,15 @@ from django.contrib.auth.views import LoginView
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
-
+import asyncio
 from .forms import NewUserForm, LoginUserForm
 
 
 def index(request):
     return render(request, 'tiara/index.html')
 
-
 def about(request):
     return render(request, 'tiara/about.html')
-
 
 # def register_request(request):
 #     if request.method == "POST":

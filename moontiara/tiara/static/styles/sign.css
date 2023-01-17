@@ -1,28 +1,59 @@
 html,
-body {
-  height: 100%;
+
+article{
+    position: relative;
+    top: 3%;
+    width: 50%;
+    margin: auto;
+}
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #5e35b1;
+  --primary-hover: #512da8;
+  --primary-focus: rgba(94, 53, 177, 0.125);
+  --primary-inverse: #FFF;
 }
 
-body {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f4f5f5;
+/* Deep-purple Dark scheme (Auto) */
+/* Automatically enabled if user has Dark mode enabled */
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #5e35b1;
+    --primary-hover: #673ab7;
+    --primary-focus: rgba(94, 53, 177, 0.25);
+    --primary-inverse: #FFF;
+  }
 }
 
+/* Deep-purple Dark scheme (Forced) */
+/* Enabled if forced with data-theme="dark" */
+[data-theme="dark"] {
+  --primary: #5e35b1;
+  --primary-hover: #673ab7;
+  --primary-focus: rgba(94, 53, 177, 0.25);
+  --primary-inverse: #FFF;
+}
+
+/* Deep-purple (Common styles) */
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+}
+.form-item{
+    margin-top: -2.5rem;
+    margin-bottom: 0.1rem;
+}
 .form-signin {
   width: 100%;
   max-width: 420px;
-  padding: 15px;
+  padding: 5px;
   margin: auto;
 }
-
 .form-label-group {
   position: relative;
-  margin-bottom: 1rem;
+  margin-bottom: 0.2rem;
 }
 
 .form-label-group > input,
@@ -30,9 +61,8 @@ body {
   height: 3.125rem;
   padding: .75rem;
 }
-.btn-block {
-    display: block;
-    width: 100%;
+.checkbutton{
+    margin-bottom: 1rem;
 }
 .form-label-group > label {
   position: absolute;
@@ -50,38 +80,9 @@ body {
   transition: all .1s ease-in-out;
 }
 
-.form-label-group input::-webkit-input-placeholder {
+input::placeholder {
   color: transparent;
 }
-
-.form-label-group input:-ms-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::-ms-input-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::-moz-placeholder {
-  color: transparent;
-}
-
-.form-label-group input::placeholder {
-  color: transparent;
-}
-
-.form-label-group input:not(:placeholder-shown) {
-  padding-top: 1.25rem;
-  padding-bottom: .25rem;
-}
-
-.form-label-group input:not(:placeholder-shown) ~ label {
-  padding-top: .25rem;
-  padding-bottom: .25rem;
-  font-size: 12px;
-  color: #777;
-}
-
 /* Fallback for Edge
 -------------------------------------------------- */
 @supports (-ms-ime-align: auto) {
