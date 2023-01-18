@@ -41,14 +41,12 @@ class RegisterUser(CreateView):
         login(self.request, user)
         return redirect('home')
 
-
 class LoginUser(LoginView):
     form_class = LoginUserForm
     template_name = 'tiara/login.html'
 
     # def get_context_data(self, **kwargs):
     #     return {'form': LoginUserForm()}
-
     def get_success_url(self):
         return reverse_lazy('home')
 

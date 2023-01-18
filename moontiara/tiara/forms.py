@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.forms import TextInput, CharField, PasswordInput
 
 
+
 # Create your forms here.
 
 class NewUserForm(UserCreationForm):
@@ -20,5 +21,5 @@ class NewUserForm(UserCreationForm):
 
 
 class LoginUserForm(AuthenticationForm):
-    username = CharField(label='pass', widget=TextInput(attrs={'class': 'form-control', 'placeholder': 'username'}))
+    username = CharField(label='pass', widget=TextInput(attrs={'class': 'form-control', 'placeholder': 'Valid', 'aria-invalid':'false','id':'852'}))
     password = CharField(label='pass', widget=PasswordInput(attrs={'class': 'form-control', 'placeholder': 'password'}))
