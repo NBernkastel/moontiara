@@ -19,7 +19,6 @@ class NewUserForm(UserCreationForm):
             'username': TextInput(attrs={'class': 'form-control', 'placeholder': 'Логин'}),
         }
 
-
 class LoginUserForm(AuthenticationForm):
     username = CharField(label='pass', widget=TextInput(attrs={'class': 'form-control', 'placeholder': 'Valid'}))
     password = CharField(label='pass', widget=PasswordInput(attrs={'class': 'form-control', 'placeholder': 'password'}))
