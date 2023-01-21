@@ -1,52 +1,52 @@
-
 <!doctype html>
 {% load static %}
 <html lang="en">
 <html data-theme="dark">
-  <head>
+<head>
     <title>Sign up</title>
     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
-    <link href= "{% static 'styles/sign.css' %}" rel="stylesheet">
-  </head>
-  <body>
-  <article>
-  <form class="form-signin w-100 m-auto" method="post">
-     {% csrf_token %}
-      <div class = "modal-content rounded-4 shadow">
-          <div class = "modal-body p-5 pt-0">
-    <div class="text-center mb-4">
-      <a href="{% url 'home' %}">
-      <img class="mb-4" src= "{% static 'img/5.png' %}" alt="" width="256" height="256">
-        </a>
-      <h1>Sign up</h1>
-    </div>
-              <div class ='form-error'>{{form.errors}}</div>
-      <div class="form-item">
-    <div class="form-label-group">
-        {{form.username}}
-        <label for="{{form.username.id}}" class="form-label">Логин</label>
-    </div>
-   <div class="form-label-group">
-      {{form.email}}
-      <label for="{{form.password1.id}}" class="form-label">мыло</label>
-    </div>
-    <div class="form-label-group">
-      {{form.password1}}
-      <label for="{{form.password1.id}}" class="form-label">Пароль</label>
-    </div>
-    <div class="form-label-group">
-      {{form.password2}}
-      <label for="{{form.password2.id}}" class="form-label">Подтверждение пароля</label>
-      </div>
-          </div>
-      <label for="remember" class="checkbutton">
-                <input type="checkbox" role="switch" id="remember" name="remember">
-                Remember me
-              </label>
-    <button type="submit">Sign in</button>
-              </div>
-          </div>
-  </form>
-      </article>
+    <link href="{% static 'styles/sign.css' %}" rel="stylesheet">
+</head>
+<body>
+<article>
+    <form class="form-signin w-100 m-auto" method="post">
+        {% csrf_token %}
+        <div class="modal-content rounded-4 shadow">
+            <div class="modal-body p-5 pt-0">
+                <div class="text-center mb-4">
+                    <a href="{% url 'home' %}">
+                        <img class="mb-4" src="{% static 'img/5.png' %}" alt="" width="256" height="256">
+                    </a>
+                    <h1>Sign up</h1>
+                </div>
+                <div class='form-error'>{{ form.errors }}</div>
+                <div class="form-item">
+                    <div class="form-label-group">
+                        {{ form.username }}
+                        <label for="{{ form.username.id }}" class="form-label">Логин</label>
+                    </div>
+                    <div class="form-label-group">
+                        {{ form.email }}
+                        <label for="{{ form.password1.id }}" class="form-label">мыло</label>
+                    </div>
+                    <div class="form-label-group">
+                        {{ form.password1 }}
+                        <label for="{{ form.password1.id }}" class="form-label">Пароль</label>
+                    </div>
+                    <div class="form-label-group">
+                        {{ form.password2 }}
+                        <label for="{{ form.password2.id }}" class="form-label">Подтверждение пароля</label>
+                    </div>
+                </div>
+                <label for="remember" class="checkbutton">
+                    <input type="checkbox" role="switch" id="remember" name="remember">
+                    Remember me
+                </label>
+                <button type="submit">Sign in</button>
+            </div>
+        </div>
+    </form>
+</article>
+<script type="text/javascript" src="{% static 'scripts/script.js' %}"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@ from .forms import NewUserForm, LoginUserForm
 
 
 def index(request):
-    return render(request, 'tiara/index.html')
+    return render(request, 'tiara/base.html')
 
 def about(request):
     return render(request, 'tiara/about.html')

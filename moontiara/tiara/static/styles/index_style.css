@@ -1,0 +1,15 @@
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --primary: #03ee9b;
+        --primary-hover: #03EE9BFF;
+        --primary-focus: rgba(244, 81, 30, 0.25);
+        --primary-inverse: #FFF;
+    }
+}

@@ -2,19 +2,13 @@
 {% load static %}
 <html lang="en">
 <head>
-    <title>{% block title%}{% endblock %}</title>
-    <link href= "{% static 'styles/index.css' %}" rel="stylesheet">
-     <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link href="{% static 'styles/index_style.css' %}" rel="stylesheet">
 </head>
-<body class = "p-3 mb-2 bg-dark">
-<header class = "mt-2 mb-6 flex h-10 items-center justify-between">
-    <h1>fhgfhgf</h1>
-</header>
-    <div>
-        {% block content %}{% endblock %}
-    </div>
-<footer>
-    <p class="text-center text-muted">© 2023 MoonTiara</p>
-  </footer>
+<body>
+<progress value="1" max="1000" id="52" class='jojo'></progress>
+<button onclick="readAll()">+1</button>
+<img src="{% static "img/3.jpg" %}" alt="45" height=300 width=300 id = "12" >
 </body>
+<script type="text/javascript" src="{% static 'scripts/home_script.js' %}"></script>
 </html>
