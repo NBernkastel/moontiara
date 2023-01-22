@@ -1,28 +1,41 @@
+body {
+    background-color: #111a1f;
+}
 
-img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.progress-bar {
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    left: 35%;
+    width: 30%;
+    height: 15px;
+    background: #aaaaaa;
+    margin: 10px 0;
+    border-radius: 15px;
+    box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
-progress{
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25px;
+
+.progress-bar .progress {
+    --time: 1s; /** Значение по умолчанию для времени анимации **/
+    background: linear-gradient(to right, #ff8800, #ee00ff);
+    width: 100%;
+    height: 100%;
+    transform-origin: left top;
+    transform: scaleX(0);
+    animation: scale var(--time) forwards;
 }
-button{
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
+card{
+    margin-left: 45%;
+    background-color: white;
 }
-@media only screen and (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-        --primary: #03ee9b;
-        --primary-hover: #03EE9BFF;
-        --primary-focus: rgba(244, 81, 30, 0.25);
-        --primary-inverse: #FFF;
+.main{
+     opacity: 0;
+}
+@keyframes scale {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
     }
 }

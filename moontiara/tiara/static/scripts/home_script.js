@@ -1,22 +1,12 @@
-let prog = document.getElementById("52");
-let im = document.getElementById("12");
-im.style.visibility = 'hidden'
-let bt = true;
+let prog = document.querySelector(".progress-bar")
+let mn = document.querySelector(".main")
+let start = Date.now()
+let timer = setInterval(function() {
 
-function readAll() {
-    let start = Date.now();
-    if (bt) {
-        bt = false
-        setInterval(function () {
-            let timePassed = Date.now() - start;
-            if (prog.value >= prog.max) {
-                clearInterval(timer);
-                return;
-            }
-            prog.value = timePassed / 50;
-            if (prog.value >= prog.max) {
-                im.style.visibility = 'visible';
-            }
-        }, 20)
+    let timePassed = Date.now() - start;
+    if (timePassed >= 3500) {
+        prog.style.visibility = 'hidden'
+        mn.style.opacity = (timePassed-3500) / 50 + '%'
     }
-}
+},20)
+

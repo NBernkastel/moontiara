@@ -1,15 +1,22 @@
 <!doctype html>
 {% load static %}
-<html lang="en">
+<html lang="ru">
 <head>
-    <title>moontiara</title>
-    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link href="{% static 'styles/index_style.css' %}" rel="stylesheet">
+    <title>moontiara</title>
 </head>
 <body>
-<progress value="0" max="1000" id="52" class='jojo'></progress>
-<button onclick="readAll()">Let's go</button>
-<img src="{% static "img/3.jpg" %}" alt="45" height=300 width=300 id = "12" >
-</body>
+<div class='progress-bar'>
+  <div class='progress' style='max-width: 100%; --time: 3s'></div>
+</div>
+<div class="main">
+<card>Hello world</card>
+</div>
 <script type="text/javascript" src="{% static 'scripts/home_script.js' %}"></script>
+</body>
+
 </html>
