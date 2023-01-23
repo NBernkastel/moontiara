@@ -14,7 +14,7 @@ let timer = setInterval(function() {
         return
     }
 },20)
-let i = 1
+let i = 0
 let card = document.querySelector(".card")
 let timer2 = setInterval(function() {
     if (i > 100){
