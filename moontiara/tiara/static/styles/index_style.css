@@ -30,8 +30,8 @@ header{
     color: #FFFFFF;
 }
 .card{
+    height: 20%;
     position: absolute;
-    top: 25%;
     box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 .main{
