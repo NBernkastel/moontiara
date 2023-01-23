@@ -1,7 +1,9 @@
 body {
-    background-color: #111a1f;
+    background-color: #212529;
 }
-
+hr{
+    color: #FFFFFF;
+}
 .progress-bar {
     position: absolute;
     top: 40%;
@@ -24,12 +26,16 @@ body {
     transform: scaleX(0);
     animation: scale var(--time) forwards;
 }
-card{
-    margin-left: 45%;
-    background-color: white;
+header{
+    color: #FFFFFF;
+}
+.card{
+    position: absolute;
+    top: 25%;
+    box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.4);
 }
 .main{
-     opacity: 0;
+     opacity: 100;
 }
 @keyframes scale {
     0% {
