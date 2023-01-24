@@ -4,25 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link href="{% static 'styles/index_style.css' %}" rel="stylesheet">
     <title>moontiara</title>
 </head>
 <body>
-<div class='progress-bar'>
-    <div class='progress' style='max-width: 100%; --time: 3s'></div>
-</div>
-<div class="main">
-    <div class="card bg-light mb-3"  id = "tv-screen" style="max-width: 10%; max-height: 20%">
-        <div class="card-header">Header</div>
-        <div class="card-body">
-            <h5 class="card-title">Сайт Nexeland</h5>
-            <p class="card-text">Это мой сайт визитка, но пока он в разработке</p>
-        </div>
+<nav>
+    <img src="{% static "img/3.jpg" %}" alt="icon" href="{% url "home" %}">
+    <div class="tt">Bernkastel</div>
+    <div class="Buttons">
+        <a href="{% url "sign" %}">
+            <button class="sign">Sign up</button>
+        </a>
+        <a href="{% url "login" %}">
+            <button class="login" href="{% url "login" %}">Login up</button>
+        </a>
     </div>
-</div>
-<script type="text/javascript" src="{% static 'scripts/home_script.js' %}"></script>
+</nav>
+<script type="text/javascript" src="{% static 'scripts/index_script.js' %}"></script>
 </body>
 
 </html>

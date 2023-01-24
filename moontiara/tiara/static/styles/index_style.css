@@ -1,47 +1,71 @@
 body {
-    background-color: #212529;
-}
-hr{
-    color: #FFFFFF;
-}
-.progress-bar {
-    position: absolute;
-    top: 40%;
-    bottom: 0;
-    left: 35%;
-    width: 30%;
-    height: 15px;
-    background: #aaaaaa;
-    margin: 10px 0;
-    border-radius: 15px;
-    box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    background-color: #14171f;
 }
 
-.progress-bar .progress {
-    --time: 1s; /** Значение по умолчанию для времени анимации **/
-    background: linear-gradient(to right, #ff8800, #ee00ff);
+nav {
     width: 100%;
-    height: 100%;
-    transform-origin: left top;
-    transform: scaleX(0);
-    animation: scale var(--time) forwards;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 19, 27, 0.8);
 }
-header{
+
+.Buttons {
+    margin-top: 30px;
+    margin-left: 85%;
+    font-size: 26px;
+    width: 15%;
+}
+
+.Buttons a {
+    color: rgba(255, 255, 255, 0);
+}
+
+.tt {
+    position: absolute;
+    top: 25px;
+    left: 100px;
+    font-family: Roboto, monospace;
+    font-size: 50px;
     color: #FFFFFF;
 }
-.card{
-    height: 20%;
+
+img {
     position: absolute;
-    box-shadow: 3px 2px 2px 1px rgba(0, 0, 0, 0.4);
+    top: 10px;
+    left: 10px;
+    height: 80px;
+    width: 80px;
+    border-radius: 20rem;
 }
-.main{
-     opacity: 100;
+
+.sign:hover {
+    color: white;
+    background-color: rgba(18, 20, 28, 0.61);
 }
-@keyframes scale {
-    0% {
-        transform: scaleX(0);
-    }
-    100% {
-        transform: scaleX(1);
-    }
+
+.login:hover {
+    color: white;
+    background-color: rgba(18, 20, 28, 0.61);
+}
+
+.sign {
+    font-family: Roboto, monospace;
+    border: 0;
+    width: 100px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0.3rem;
+
+}
+
+.login {
+    font-family: Roboto, monospace;
+    border: 0;
+    width: 100px;
+    height: 35px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 0.3rem;
+
 }
