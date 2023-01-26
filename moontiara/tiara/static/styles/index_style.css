@@ -1,71 +1,43 @@
-body {
-    background-color: #14171f;
+header {
+    position: fixed;
+    z-index: 2;
 }
 
 nav {
-    width: 100%;
-    height: 100px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(17, 19, 27, 0.8);
+    margin-top: -5rem;
+    height: 7rem;
+    backdrop-filter: saturate(120%) blur(20px);
 }
 
-.Buttons {
-    margin-top: 30px;
-    margin-left: 85%;
-    font-size: 26px;
-    width: 15%;
-}
-
-.Buttons a {
-    color: rgba(255, 255, 255, 0);
-}
-
-.tt {
-    position: absolute;
-    top: 25px;
-    left: 100px;
+.icon div {
     font-family: Roboto, monospace;
-    font-size: 50px;
+    font-size: 3rem;
+    margin-top: -5rem;
+    margin-left: 7rem;
+}
+
+.icon img {
+    height: 100px;
+    width: 100px;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    border-radius: 50%;
+}
+
+.buttons {
+    margin-top: 3rem;
+    margin-right: 0.5rem;
+}
+
+.buttons a:hover {
+    background-color: #673ab7;
     color: #FFFFFF;
 }
 
-img {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    height: 80px;
-    width: 80px;
-    border-radius: 20rem;
-}
-
-.sign:hover {
-    color: white;
-    background-color: rgba(18, 20, 28, 0.61);
-}
-
-.login:hover {
-    color: white;
-    background-color: rgba(18, 20, 28, 0.61);
-}
-
-.sign {
-    font-family: Roboto, monospace;
-    border: 0;
-    width: 100px;
-    height: 35px;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 0.3rem;
-
-}
-
-.login {
-    font-family: Roboto, monospace;
-    border: 0;
-    width: 100px;
-    height: 35px;
-    background-color: rgba(255, 255, 255, 1);
-    border-radius: 0.3rem;
-
+/*img{*/
+/*    margin-left: 500px;*/
+/*    margin-top: 50px;*/
+/*}*/
+.buttons a {
+    margin-left: 0.3rem;
 }
